@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.Communication", "src\Shared\MeuLivroDeReceitas.Communication\MeuLivroDeReceitas.Communication.csproj", "{9D43A8D3-B7C1-4F8A-ADE8-A920FF4EB47F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.API", "src\Backend\MeuLivroDeReceitas.API\MeuLivroDeReceitas.API.csproj", "{099CA4A0-6306-4E0E-8D1D-6F132EEB2E92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{9D43A8D3-B7C1-4F8A-ADE8-A920FF4EB47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D43A8D3-B7C1-4F8A-ADE8-A920FF4EB47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D43A8D3-B7C1-4F8A-ADE8-A920FF4EB47F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{099CA4A0-6306-4E0E-8D1D-6F132EEB2E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{099CA4A0-6306-4E0E-8D1D-6F132EEB2E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{099CA4A0-6306-4E0E-8D1D-6F132EEB2E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{099CA4A0-6306-4E0E-8D1D-6F132EEB2E92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{F0B65F00-A201-4BB8-947B-49B0A3C9B099} = {7A468272-0F09-479E-AD8C-A7EA07CD9EE8}
 		{6136F1D1-BFB2-4DF3-929C-E4093F7E4F07} = {7A468272-0F09-479E-AD8C-A7EA07CD9EE8}
 		{9D43A8D3-B7C1-4F8A-ADE8-A920FF4EB47F} = {9C3551DC-7153-445C-B9D3-F9AA948DB7F4}
+		{099CA4A0-6306-4E0E-8D1D-6F132EEB2E92} = {7A468272-0F09-479E-AD8C-A7EA07CD9EE8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA3E15AD-5337-4236-9DC8-218214A8EB39}
