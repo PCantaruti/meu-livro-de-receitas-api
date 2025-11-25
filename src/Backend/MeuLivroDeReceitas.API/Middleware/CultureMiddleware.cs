@@ -11,9 +11,18 @@ namespace MeuLivroDeReceitas.API.Middleware
         }
         public async Task Invoke(HttpContext context)
         {
-            var requestedCulture = context.Request.Headers.AcceptLanguage.FirstOrDefault();
+            var supportedLanguages = CultureInfo.GetCultures(CultureTypes.AllCultures);
 
-            var cultureInfo = new CultureInfo(requestedCulture);
+            var header = context.Request.Headers["Accept-Language"].ToString();
+            var requestedCulture = header?.Split(',').FirstOrDefault()?.Split(';').FirstOrDefault();
+
+            var cultureInfo = new CultureInfo("en");
+
+            if(string.IsNullOrWhiteSpace(requestedCulture) == false 
+                && supportedLanguages.Any(c => c.Name.Equals(requestedCulture)))
+            {
+                cultureInfo = new CultureInfo(requestedCulture);
+            }
 
             CultureInfo.CurrentCulture = new CultureInfo(requestedCulture);
             CultureInfo.CurrentUICulture = new CultureInfo(requestedCulture);
