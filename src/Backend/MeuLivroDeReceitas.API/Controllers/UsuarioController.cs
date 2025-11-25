@@ -1,4 +1,5 @@
-﻿using MeuLivroDeReceitas.Communication.Requests;
+﻿using MeuLivroDeReceitas.Application.UseCases.Usuario.Registrar;
+using MeuLivroDeReceitas.Communication.Requests;
 using MeuLivroDeReceitas.Communication.Responses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,11 @@ namespace MeuLivroDeReceitas.API.Controllers
         [ProducesResponseType(typeof(ResponseRegistrarUsuarioJson) ,StatusCodes.Status201Created)]
         public IActionResult Registrar(RequestRegistrarUsuarioJson request)
         {
-            return Created();
+            var useCase = new RegistrarUsuarioUseCase();
+
+            var result = useCase.Execute(request);
+
+            return Created(string.Empty, result);
         }
     }
 }
