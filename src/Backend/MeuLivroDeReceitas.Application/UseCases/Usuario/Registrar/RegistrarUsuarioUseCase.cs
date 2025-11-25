@@ -1,4 +1,5 @@
 ﻿
+using MeuLivroDeReceitas.Application.Services.AutoMapper;
 using MeuLivroDeReceitas.Communication.Requests;
 using MeuLivroDeReceitas.Communication.Responses;
 using MeuLivroDeReceitas.Exceptions.ExceptionBase;
@@ -13,10 +14,12 @@ namespace MeuLivroDeReceitas.Application.UseCases.Usuario.Registrar
             Validate(request);
 
             //2. Mapear request para entidade
-            var user = new Domain.Entities.Usuario
+            var autoMapper = new AutoMapper.MapperConfiguration(options =>
             {
-                
-            };
+                options.AddProfile(new AutoMapping());
+            }).CreateMapper();
+
+            var user = autoMapper.Map<Domain.Entities.Usuario>(request);
 
             //3. Criptografar senha
 

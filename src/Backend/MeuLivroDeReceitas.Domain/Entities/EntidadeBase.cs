@@ -1,5 +1,4 @@
-﻿
-namespace MeuLivroDeReceitas.Domain.Entities
+﻿namespace MeuLivroDeReceitas.Domain.Entities
 {
     public class EntidadeBase
     {
